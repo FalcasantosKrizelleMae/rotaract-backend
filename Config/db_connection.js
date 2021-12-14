@@ -1,4 +1,4 @@
-var mysql = require('../lib/mysql');
+var mysql = require('mysql');
 
 const dotenv = require('dotenv');
 
