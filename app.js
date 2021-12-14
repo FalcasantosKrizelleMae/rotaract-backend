@@ -1,27 +1,15 @@
 const express = require('express');
 const cors = require('cors');
 const moment = require('moment');
-var session = require('express-session');
-var MemoryStore = require('memorystore')(session);
 
 const db = require('./Config/db_connection');
 
 const app = express();
-var PORT = process.env.PORT || 5000;
+var PORT = process.env.PORT || 3000;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
-app.use(
-   session({
-      cookie: { maxAge: 86400000 },
-      store: new MemoryStore({
-         checkPeriod: 86400000, // prune expired entries every 24h
-      }),
-      resave: false,
-      secret: 'keyboard cat',
-   })
-);
 
 //Import Routes
 const authRoute = require('./routes/auth');
