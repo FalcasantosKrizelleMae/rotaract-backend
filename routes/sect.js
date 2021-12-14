@@ -9,13 +9,7 @@ const sect = require('express').Router();
 const cors = require('cors');
 const moment = require('moment');
 
-sect.use(
-   cors({
-      origin: ['http://localhost:3000'],
-      methods: ['GET', 'POST'],
-      credentials: true,
-   })
-);
+sect.use(cors());
 
 //For cookies
 sect.use(cookieParser());

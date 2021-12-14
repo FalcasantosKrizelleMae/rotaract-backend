@@ -10,13 +10,7 @@ admin.use(bodyParser.json());
 const nodemailer = require('nodemailer');
 const { response } = require('express');
 
-admin.use(
-   cors({
-      origin: ['http://localhost:3000'],
-      methods: ['GET', 'POST', 'PUT', 'DELETE'],
-      credentials: true,
-   })
-);
+admin.use(cors());
 
 let transporter = nodemailer.createTransport({
    host: 'smtp.gmail.com',

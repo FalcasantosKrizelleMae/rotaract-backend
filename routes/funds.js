@@ -8,13 +8,7 @@ const funds = require('express').Router();
 const cors = require('cors');
 const moment = require('moment');
 
-funds.use(
-   cors({
-      origin: ['http://localhost:3000'],
-      methods: ['GET', 'POST'],
-      credentials: true,
-   })
-);
+funds.use(cors());
 
 //For cookies
 funds.use(cookieParser());

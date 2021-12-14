@@ -10,13 +10,7 @@ const express = require('express');
 const auth = require('express').Router();
 const cors = require('cors');
 
-auth.use(
-   cors({
-      origin: ['http://localhost:3000'],
-      methods: ['GET', 'POST'],
-      credentials: true,
-   })
-);
+auth.use(cors());
 
 //For cookies
 auth.use(cookieParser());

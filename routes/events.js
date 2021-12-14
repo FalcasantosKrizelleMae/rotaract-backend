@@ -9,13 +9,7 @@ const cors = require('cors');
 const { response } = require('express');
 const moment = require('moment');
 
-event.use(
-   cors({
-      origin: ['http://localhost:3000'],
-      methods: ['GET', 'POST'],
-      credentials: true,
-   })
-);
+event.use(cors());
 
 let transporter = nodemailer.createTransport({
    host: 'smtp.gmail.com',
