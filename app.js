@@ -6,7 +6,7 @@ const db = require('./Config/db_connection');
 
 const app = express();
 
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 5000;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -58,5 +58,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(PORT, () => {
-   console.log('server successfully started on port ' + PORT);
+   console.log('---------SERVER IS RUNNING AT PORT ' + PORT);
 });
