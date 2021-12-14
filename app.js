@@ -1,5 +1,3 @@
-let PORT = process.env.PORT || 3000;
-
 const express = require('express');
 const cors = require('cors');
 const moment = require('moment');
@@ -7,6 +5,8 @@ const moment = require('moment');
 const db = require('./Config/db_connection');
 
 const app = express();
+
+var PORT = process.env.PORT || 3000;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
