@@ -1,6 +1,6 @@
 var mysql = require('mysql');
 //Connect to Database
-var db = mysql.createConnection({
+var db = mysql.createPool({
    host: 'us-cdbr-east-05.cleardb.net',
    user: 'b81b197e25d54a',
    password: 'bb7f0480',
