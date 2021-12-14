@@ -6,8 +6,8 @@ dotenv.config({ path: './.env' });
 
 //Connect to Database
 var db = mysql.createConnection({
+   hostname: process.env.DB_HOST,
    user: process.env.DB_USER,
-   host: process.env.DB_HOST,
    password: process.env.DB_PASSWORD,
    database: process.env.DATABASE,
    port: 3306,
