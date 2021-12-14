@@ -6,7 +6,7 @@ const schedule = require('node-schedule');
 const db = require('./Config/db_connection');
 
 const app = express();
-const port = process.env.PORT || 5000;
+const PORT = 5000;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -57,4 +57,6 @@ app.get('/', (req, res) => {
    console.log(notifDate);
 });
 
-app.listen(port, () => console.log(`Running on port ${port}`));
+app.listen(process.env.PORT || PORT, () =>
+   console.log(`Running on port ${PORT}`)
+);
